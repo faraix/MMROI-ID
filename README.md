@@ -1,6 +1,6 @@
 # MMROI-ID: Multimodal ROI Identification
 
-MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. As a start, the toolkit uses **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID complements Neuroparc by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions.
+MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. As a start, the toolkit uses **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions.
 
 [
 \text{DOF} =
