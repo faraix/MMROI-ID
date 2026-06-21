@@ -74,4 +74,10 @@ Optional Python packages:
 
 Planned extensions include diffusion MRI applications, where DOF will be evaluated for identifying white matter tracts derived from DTI and tractography pipelines relative to established white matter atlases.
 
+## Acknowledgements
+https://github.com/neurodata/neuroparc
+
+## References
+Lawrence, R.M., Bridgeford, E.W., Myers, P.E. et al. Standardizing human brain parcellations. Sci Data 8, 78 (2021). https://doi.org/10.1038/s41597-021-00849-3
+
 
