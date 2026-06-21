@@ -1,6 +1,6 @@
 # MMROI-ID: Multimodal ROI Identification
 
-MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions.
+MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions. 
 
 [
 \text{DOF} =
@@ -59,6 +59,9 @@ Planned extensions include diffusion MRI applications, where DOF will be evaluat
 https://github.com/neurodata/neuroparc
 
 ## References
+This toolkit was developed for the identification to assign labels to regions of the Gordon et al atlas for the paper:
+Groenewold, N. A., Bethlehem, R. A., Amod, A. R., Nwosu, E. C., Mberi, F., Wedderburn, C. J., ... & Ipser, J. C. (2024). Morphometric Integration of Brain Networks in Young Children Exposed to Maternal Depression in a South African Birth Cohort. Biological Psychiatry, 95(10), S45-S46.
+
 Lawrence, R.M., Bridgeford, E.W., Myers, P.E. et al. Standardizing human brain parcellations. Sci Data 8, 78 (2021). https://doi.org/10.1038/s41597-021-00849-3
 
 
