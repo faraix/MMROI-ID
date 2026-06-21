@@ -1,6 +1,6 @@
 # MMROI-ID: Multimodal ROI Identification
 
-MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. As a start, the toolkit uses **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions.
+MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Dominant Overlap Fraction (DOF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice**. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions.
 
 [
 \text{DOF} =
@@ -31,21 +31,6 @@ The repository includes a Bash script that performs the full workflow:
 
 A Python wrapper is also included for users who prefer a configurable Python interface while still relying on AFNI and FSL command-line tools underneath.
 
-## Output Metrics
-
-Each ROI is summarized with:
-
-* ROI ID
-* Best-matching atlas label
-* Overlap voxels
-* Total overlap voxels
-* Dominant Overlap Fraction
-* ROI voxel count
-* Atlas-label voxel count
-* Jaccard coefficient
-* Mean slice-wise Dice
-* Maximum slice-wise Dice
-* Number of Dice slices
 
 ## Installation
 
@@ -65,10 +50,6 @@ Optional Python packages:
 * NumPy
 * Pandas
 * NiBabel
-
-## Status
-
-⚠️ **Work in progress:** MMROI-ID is under active development and currently focused on gray matter atlas correspondence.
 
 ## Future Directions
 
