@@ -1,6 +1,6 @@
 # MMROI-ID: Multimodal ROI Identification
 
-MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Overlap Fraction (OF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice** [1]. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) [2] by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while DOF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions. 
+MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Overlap Fraction (OF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice** [1]. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) [3] by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while OF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions, for which standard overlap metrics are often applied despite known limitations [2]. 
 
 [
 \text{OF} =
@@ -62,7 +62,8 @@ https://github.com/neurodata/neuroparc
 This toolkit was developed for assignment of labels to regions of the Gordon et al atlas in the paper:
 Groenewold, N. A., Bethlehem, R. A., Amod, A. R., Nwosu, E. C., Mberi, F., Wedderburn, C. J., ... & Ipser, J. C. (2024). Morphometric Integration of Brain Networks in Young Children Exposed to Maternal Depression in a South African Birth Cohort. Biological Psychiatry, 95(10), S45-S46.
 
-1. Reinke, A., Tizabi, M. D., Baumgartner, M., Eisenmann, M., Heckmann-Nötzel, D., Kavur, A. E., ... & Maier-Hein, L. (2024). Understanding metric-related pitfalls in image analysis validation. Nature methods, 21(2), 182-194.
-2. Lawrence, R.M., Bridgeford, E.W., Myers, P.E. et al. Standardizing human brain parcellations. Sci Data 8, 78 (2021). https://doi.org/10.1038/s41597-021-00849-3
+1. Taha, A. A., & Hanbury, A. (2015). Metrics for evaluating 3D medical image segmentation: analysis, selection, and tool. BMC medical imaging, 15(1), 29.
+2. Reinke, A., Tizabi, M. D., Baumgartner, M., Eisenmann, M., Heckmann-Nötzel, D., Kavur, A. E., ... & Maier-Hein, L. (2024). Understanding metric-related pitfalls in image analysis validation. Nature methods, 21(2), 182-194.
+3. Lawrence, R.M., Bridgeford, E.W., Myers, P.E. et al. Standardizing human brain parcellations. Sci Data 8, 78 (2021). https://doi.org/10.1038/s41597-021-00849-3
 
 
