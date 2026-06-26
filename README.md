@@ -2,11 +2,13 @@
 
 MMROI-ID is an open-source toolkit for identifying anatomical correspondence between neuroimaging parcellations and reference atlases. This toolkit proposes the use of the **Overlap Fraction (OF)** for cross-atlas label assignment, while also reporting conventional overlap metrics including **Jaccard** and **Dice** [1]. MMROI-ID thus complements Neuroparc (https://github.com/neurodata/neuroparc) [3] by prioritizing anatomical correspondence over segmentation agreement alone. Dice remains useful for quality control, while OF improves interpretability when comparing atlases with different ROI sizes, resolutions, or boundary definitions, for which standard overlap metrics are often applied despite known limitations [2]. 
 
-To demonstrate the utility of this toolkit across modalituies we will walk through an example application in diffusion tensor imaging. To improve the precision of our identification of superficially located white matter interleaved in then space between the subcortical network and the cortex, we warped the JHU White-Matter Tractography Atlas to the subject space using 3dQwarp and 3dNwarpApply using the MNI152_2009_template (Fonov et al., 2009, 2011). JHU white matter probabilistic tracts have unique values for each voxel they are made up of. To ensure a uniform value across the whole track, we divided each voxel value by itself using FSL function fslmaths such that non-zero voxel values assumed the value of 1 thereby binarizing it. We then used 3dcalc to identify overlaps between white matter probabilistic tracks and binarized JHU white matter masks:
+To demonstrate the utility of this toolkit across modalities we will walk through an example application in diffusion tensor imaging (DTI). 
+
+As an example application of the workflow, we identified overlaps between atlas-defined regions and white matter tracts in diffusion MRI. To facilitate this, the JHU White-Matter Tractography Atlas (https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/Atlases.html) is warped to subject space and binarized. Overlap between binarized tract masks and the target masks is then quantified using 3dcalc as follows:
 
 <img width="497" height="218" alt="Screenshot from 2026-06-26 18-16-06" src="https://github.com/user-attachments/assets/d497fc46-c4bd-4d6e-842c-64187ec8c768" />
 
-Probabilistic tracks may intersect with multiple masks, so we calculated the number of voxels with non- zero values in each of these intersections using 3dROIstats and the track identity was assigned to the masks with the most voxels as follows:
+Probabilistic tracks may intersect with multiple masks, so we calculated the number of voxels with non-zero values in each of these intersections using 3dROIstats and the track identity was assigned to the masks with the most voxels as follows:
 
 <img width="497" height="218" alt="Screenshot from 2026-06-26 18-16-24" src="https://github.com/user-attachments/assets/c349f93c-3847-4d36-8bbd-75c7c5c3542a" />
 
@@ -19,7 +21,6 @@ OF answers:
 > Which anatomical label does this ROI primarily correspond to?
 
 while Dice and Jaccard quantify spatial similarity between regions.
-
 
 ### Bash workflow
 
@@ -57,6 +58,7 @@ Planned extensions include diffusion MRI applications, where OF will be evaluate
 https://github.com/neurodata/neuroparc
 
 ## References
+
 This toolkit was developed for assignment of labels to regions of the Gordon et al atlas in the paper (in press):
 Groenewold, N. A., Bethlehem, R. A., Amod, A. R., Nwosu, E. C., **Mberi**, **F**., Wedderburn, C. J., ... & Ipser, J. C. (2024). Morphometric Integration of Brain Networks in Young Children Exposed to Maternal Depression in a South African Birth Cohort. Biological Psychiatry, 95(10), S45-S46.
 
